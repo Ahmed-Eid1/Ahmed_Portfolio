@@ -21,7 +21,7 @@ export const siteContent = {
       "Framer Motion",
     ],
     Backend: ["Node.js", "Express.js", "REST APIs", "JAVA", "C++", "OOP", "DATA STRUCTURES", "ALGORITHMS","PROBLEMS SOLVING"],
-    Database: ["Microsoft SQL Server", "Schema Design"],
+    Database: ["Microsoft SQL Server", "Schema Design", "ER Diagrams"],
     Tools: ["Git", "GitHub", "VS Code", "Claude Code"],
   },
   projects: [
