@@ -20,9 +20,9 @@ export const siteContent = {
       "GSAP",
       "Framer Motion",
     ],
-    Backend: ["Node.js", "Express.js", "REST APIs"],
+    Backend: ["Node.js", "Express.js", "REST APIs", "JAVA", "C++", "OOP", "DATA STRUCTURES", "ALGORITHMS","PROBLEMS SOLVING"],
     Database: ["Microsoft SQL Server", "Schema Design"],
-    Tools: ["Git", "GitHub", "VS Code"],
+    Tools: ["Git", "GitHub", "VS Code", "Claude Code"],
   },
   projects: [
     {
