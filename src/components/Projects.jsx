@@ -2,13 +2,19 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteContent } from '../data/content'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Projects = () => {
   const cardRefs = useRef([])
   const titleRef = useRef(null)
+
+  const handleCardClick = (project) => {
+    if (project.liveSite) {
+      window.open(project.liveSite, '_blank', 'noopener,noreferrer')
+    }
+  }
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -59,7 +65,8 @@ const Projects = () => {
             <div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="project-card group bg-surface border border-accent/10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_60px_rgba(45,212,191,0.2)] hover:-translate-y-2 backdrop-blur-sm relative"
+              onClick={() => handleCardClick(project)}
+              className={`project-card group bg-surface border border-accent/10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_20px_60px_rgba(45,212,191,0.2)] hover:-translate-y-2 backdrop-blur-sm relative cursor-pointer hover:border-accent/50`}
             >
               {/* Top Border Accent */}
               <div className="h-1 bg-accent w-full transition-all duration-300 group-hover:h-2" />
@@ -69,15 +76,29 @@ const Projects = () => {
                   <h3 className="text-white text-2xl md:text-3xl font-serif font-bold group-hover:text-accent transition-colors drop-shadow-md">
                     {project.title}
                   </h3>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-accent transition-colors hover:scale-110"
-                    aria-label="View on GitHub"
-                  >
-                    <FaGithub size={24} />
-                  </a>
+                  <div className="flex gap-3">
+                    {project.liveSite && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          window.open(project.liveSite, '_blank', 'noopener,noreferrer')
+                        }}
+                        className="text-gray-400 hover:text-accent transition-colors hover:scale-110"
+                        aria-label="View Live Site"
+                      >
+                        <FaExternalLinkAlt size={24} />
+                      </button>
+                    )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-accent transition-colors hover:scale-110"
+                      aria-label="View on GitHub"
+                    >
+                      <FaGithub size={24} />
+                    </a>
+                  </div>
                 </div>
 
                 <p className="text-gray-300 mb-6 leading-relaxed font-body font-light">
