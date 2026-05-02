@@ -48,7 +48,7 @@ export const siteContent = {
       type: "Frontend Practice",
     },
     {
-      title: "TURBO.NOS Car EXHIBITION Website",
+      title: "TURBONOS Cars-EXHIBITION",
       description:
         "EXHIBITION Website for TURBO.NOS Sharing my Love of Engines and building an immersive car exhibition hosting the most luxurious and fastest cars in the world, with Cinematic Animations and Special Effects ",
       tech: ["HTML5", "CSS3", "React", "Vite", "GSAP", "Tailwind CSS", "Lenis", "ffmpeg"],
