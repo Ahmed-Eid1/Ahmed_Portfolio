@@ -18,7 +18,7 @@ export const siteContent = {
       "CSS3",
       "Framer Motion",
     ],
-    Backend: ["Node.js", "Express.js", "REST APIs", "JAVA", "C++", "OOP","DATA STRUCTURES","ALGORITHMS","PROBLEMS SOLVING"],
+    Backend: ["Node.js", "Express.js", "REST APIs", "JAVA", "C++", "OOP", "DATA STRUCTURES", "ALGORITHMS", "PROBLEMS SOLVING"],
     Database: ["Microsoft SQL Server", "Schema Design", "ER Diagrams"],
     Tools: ["Git", "GitHub", "VS Code", "Claude Code"],
   },
@@ -46,6 +46,14 @@ export const siteContent = {
       tech: ["HTML5", "CSS3", "Flexbox", "Responsive Design"],
       github: "https://github.com/Ahmed-Eid1",
       type: "Frontend Practice",
+    },
+    {
+      title: "TURBO.NOS Car EXHIBITION Website",
+      description:
+        "EXHIBITION Website for TURBO.NOS Sharing my Love of Engines and building an immersive car exhibition hosting the most luxurious and fastest cars in the world, with Cinematic Animations and Special Effects ",
+      tech: ["HTML5", "CSS3", "React", "Vite", "GSAP", "Tailwind CSS", "Lenis", "ffmpeg"],
+      github: "https://github.com/Ahmed-Eid1",
+      type: "Frontend Project",
     },
   ],
   experience: [
